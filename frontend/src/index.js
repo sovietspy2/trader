@@ -23,6 +23,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import StockList from './components/StockList';
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -52,7 +53,7 @@ ReactDOM.render(
         <Link to="/sell">Sell</Link>
         </Menu.Item>
         <Menu.Item key="4" icon={<BarChartOutlined />}>
-          nav 4
+          <Link to="/stocks">Stocks</Link>
         </Menu.Item>
         <Menu.Item key="5" icon={<CloudOutlined />}>
           nav 5
@@ -78,6 +79,9 @@ ReactDOM.render(
             while the rest are ignored */}
         <Route path="/buy">
           <App />
+        </Route>
+        <Route path="/stocks">
+          <StockList />
         </Route>
         </Switch>
         </div>
